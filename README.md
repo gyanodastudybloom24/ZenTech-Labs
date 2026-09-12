@@ -3,6 +3,7 @@
 **AI, software and cloud engineering studio website** — built with Next.js 16, React 19 and TypeScript.
 
 
+
 🔗 **Live site:** [zentechlabs.gyanoda.com](https://zentechlabs.gyanoda.com)
 
 A venture of Studybloom 24 LLP. *(Gyanoda Courses and the Gyanoda app are a separate education product — not part of this repo.)*
