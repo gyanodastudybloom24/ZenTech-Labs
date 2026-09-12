@@ -79,7 +79,7 @@ export function WorkShowcase() {
     const card = track.current?.querySelectorAll<HTMLElement>(".work-card")[index];
     card?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
   };
-  const trackCursor = (e: React.MouseEvent<HTMLDivElement>) => {
+  const trackCursor = (e: React.MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     e.currentTarget.style.setProperty("--x", `${e.clientX - rect.left}px`);
     e.currentTarget.style.setProperty("--y", `${e.clientY - rect.top}px`);

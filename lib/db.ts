@@ -15,7 +15,7 @@ export function isDbConfigured(): boolean {
 
 let tableReady: Promise<void> | null = null;
 
-function ensureTable(sql: ReturnType<typeof neon>) {
+function ensureTable(sql: ReturnType<typeof neon<false, false>>) {
   if (!tableReady) {
     tableReady = sql`
       CREATE TABLE IF NOT EXISTS enquiries (

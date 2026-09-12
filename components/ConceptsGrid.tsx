@@ -27,14 +27,14 @@ export function ConceptsGrid() {
     return () => observer.disconnect();
   }, []);
 
-  const tilt = (e: React.MouseEvent<HTMLDivElement>) => {
+  const tilt = (e: React.MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const px = (e.clientX - rect.left) / rect.width - 0.5;
     const py = (e.clientY - rect.top) / rect.height - 0.5;
     e.currentTarget.style.setProperty("--rx", `${(-py * 8).toFixed(2)}deg`);
     e.currentTarget.style.setProperty("--ry", `${(px * 8).toFixed(2)}deg`);
   };
-  const resetTilt = (e: React.MouseEvent<HTMLDivElement>) => {
+  const resetTilt = (e: React.MouseEvent<HTMLElement>) => {
     e.currentTarget.style.setProperty("--rx", "0deg");
     e.currentTarget.style.setProperty("--ry", "0deg");
   };
